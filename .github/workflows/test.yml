@@ -15,4 +15,6 @@ jobs:
       - run: date +%s > tmp.md
       - run: |
           chmod +x ./scripts/commit.sh
-          ./scripts/commit.sh 'update'
+          ./scripts/commit.sh
+        env:
+          MESSAGE: "Update"
