@@ -2,8 +2,8 @@ name: Commit on commit
 
 on:
   push:
-    paths:
-      - '!tmp.md'
+    paths-ignore:
+      - tmp.md
   workflow_dispatch:
 
 jobs:
