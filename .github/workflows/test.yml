@@ -3,7 +3,7 @@ name: Commit on commit
 on:
   push:
     paths:
-      - README.md
+      - '!tmp.md'
   workflow_dispatch:
 
 jobs:
