@@ -2,6 +2,8 @@ name: Commit on commit
 
 on:
   push:
+    paths:
+      - README.md
   workflow_dispatch:
   
 jobs:
@@ -10,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: date +%s > README.md
+      - run: date +%s > tmp.md
       - run: |
             chmod +x ./scripts/commit.sh
-            ./scripts/commit.sh
+            ./scripts/commit.sh 'update'
